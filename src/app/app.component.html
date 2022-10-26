@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+    <span>{{title}}</span>
+    <ul>
+        <li ><a mat-raised-button routerLink="/dashboard" routerLinkActive="active-link">Dashboard</a></li>
+        <li><a mat-raised-button routerLink="/heroes" routerLinkActive="active-link">Heroes</a></li>
+    </ul>
+</mat-toolbar>
+<h1></h1>
+<router-outlet></router-outlet>
+<app-messages></app-messages>

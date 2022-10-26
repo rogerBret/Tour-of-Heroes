@@ -1,0 +1,23 @@
+<button mat-button (click)="goBack()">go back</button>
+<mat-card  class="example-card mat-elevation-z4" *ngIf="hero" >
+    <mat-card-header>
+      <img src="{{hero.img}}" class="example-header-image" mat-card-avatar alt="{{hero.name}}">
+      <mat-card-title>{{hero.name | uppercase}}</mat-card-title>
+      <mat-card-subtitle>{{hero.subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{hero.img}}" alt="{{hero.name}}">
+    <mat-card-content>
+        <p>
+            Details: {{hero.detail}}
+          </p>
+          <label for="hero-name">Hero name: </label>
+          <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+ </mat-card-content>
+    <!--mat-card-actions>
+        <button mat-mini-fab aria-label="Example icon-button with a heart icon">
+            <mat-icon>favorite</mat-icon>
+        </button>
+      <button mat-button  (click)="onSelect(hero.id)">Details</button>
+    </mat-card-actions-->
+    <button mat-button type="button" (click)="save()">save</button>
+</mat-card>

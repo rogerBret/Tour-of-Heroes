@@ -1,0 +1,13 @@
+<div class="content"  *ngIf="messageService.messages.length">
+    <h2 mat-dialog-title>Messages</h2>
+    <button  type="button" mat-button
+            (click)="messageService.clear()">Clear messages</button>
+    <div mat-dialog-content *ngFor='let message of messageService.messages'> {{message}} </div>
+</div>
+  <!--h1 mat-dialog-title>Hi Hero selected</h1>
+<div mat-dialog-content *ngIf="messageService.messages.length">
+    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="message" cdkFocusInitial>Ok</button>
+</div-->

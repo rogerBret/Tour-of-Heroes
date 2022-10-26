@@ -1,0 +1,19 @@
+<h2>Top Heroes</h2>
+<app-hero-search></app-hero-search>
+<mat-list role="list">
+    <mat-list-item role="listitem" *ngFor="let hero of heroes">
+        <mat-card-header>
+             <a mat-button routerLink="/detail/{{hero.id}}">
+                <img src="{{hero.img}}" class="example-header-image" mat-card-avatar alt="{{hero.name}}">
+                 {{hero.name}}
+            </a>
+        </mat-card-header>
+         </mat-list-item>
+    
+  </mat-list>
+<!--div class="heroes-menu">
+  <a  *ngFor="let hero of heroes"
+    routerLink="/detail/{{hero.id}}">
+    {{hero.name}}
+  </a>
+</div-->
